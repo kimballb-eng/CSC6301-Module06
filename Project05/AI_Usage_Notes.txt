@@ -1,0 +1,31 @@
+Author: Bailey Sudbay
+
+Part 2: Generative AI & Refinement
+
+The Prompt I Used:
+I used a GenAI tool to generate a new Java class called "WhatsAppService" that implements the existing NotificationMedium interface. I specified that the method signature must be exactly:
+
+void send(String message)
+
+I also asked it to print a confirmation message and create a test script that switches between Email, SMS, and WhatsApp using "setMedium()" and prints the session log.
+
+How I Verified the AI Output:
+Before finalizing the AI-generated code, I opened my existing "NotificationMedium.java" file to confirm the exact interface name and method signature. I checked:
+
+- The class correctly implemented "NotificationMedium"
+- The method name matched the interface
+- The parameter type was String
+- The return type was void
+
+I used the @Override annotation so the compiler would catch any mismatch. This ensured I extended the system without modifying "AlertSystem" or rewriting the existing code.
+
+Adjustments I made:
+
+After generating the code, I made the following updates:
+- I simplified the generated code so it was clean and consistent with the structure of my existing service classes.
+- I adjusted the console output so it matched the format already used by EmailService and SMSService.
+- I updated the test script to use my actual method names (notifyUser and getLog), since the first generated version used different names.
+- I reviewed everything to ensure it aligned with the current project structure and did not require modifying AlertSystem.
+
+
+The final result adds WhatsApp as a new notification option while keeping the original AlertSystem and interface unchanged.
